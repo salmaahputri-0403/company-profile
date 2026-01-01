@@ -1,0 +1,454 @@
+:root{
+    --peach:#ffdab9;
+    --dark:#2f4f4f;
+    --cyan:#e0ffff;
+    --brown:#3e2723;
+    --green:#25d366;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#nav-container{
+    background-color: var(--cyan);
+    position: sticky;
+    top: 0px;
+    /* untuk posisi paling atas pakai z-index */
+    z-index: 1; 
+}
+.nav-flex{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+.nav-flex label, #hamburger{
+    display: none;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a{
+    display: block;
+    color: var(--dark);
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+nav ul li a:hover{
+    background-color: var(--peach);
+    transition: all 0 3s;
+}
+.nav-brand h2{
+    margin: 14px 0 0 10px;
+    color: var(--dark);
+}
+
+#hero-container{
+    background-image: url(../image/hero_image.png);
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+#hero-container .text {
+    text-align: center;
+    color: var(--cyan);
+    font-size: 20px;
+}
+#hero-container .button{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--green);
+    color: var(--cyan);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#hero-container .button:hover{
+    background-color: var(--dark);
+    color: var(--cyan);
+}
+
+main{
+    width: 80%;
+    margin: auto;
+}
+/* about */
+main #about h1{
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+main #about .about_deskripsi{
+    text-align: center;
+    color: var(--dark);
+}
+main .about-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+}
+main .about-flex .about_img,.about-text{
+    width: 50%;
+    margin: 14px;
+}
+main .about-flex .about_img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Service */
+main #service h1{
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+main #service .service-deskripsi{
+    color: var(--dark);
+    text-align: center;
+}
+main #service .service-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+main #service .service-flex .service-items{
+    width: 25%;
+    text-align: center;
+    padding: 20px 10px;
+}
+main #service .service-flex .service-items .fas{
+    color: var(--peach);
+}
+
+/* katalog */
+main #katalog h1{
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+main #katalog .katalog-deskripsi{
+    color: var(--dark);
+    text-align: center;
+}
+main #katalog .katalog-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+main #katalog  .katalog-flex .katalog-items{
+    width: 25%;
+    text-align: center;
+    padding: 20px 10px;
+}
+main #katalog .katalog-flex .katalog-items img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+main #katalog .katalog-flex .katalog-items h3{
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--dark);
+}
+main #katalog .katalog-flex .katalog-items p{
+    font-size: 14px;
+    color: var(--dark);
+}
+main #katalog .katalog-flex .katalog-items .harga-chat-kontainer{
+    border-bottom: 2px solid var(--peach);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    padding: 5px;
+}
+main #katalog .katalog-flex .katalog-items .harga-chat-kontainer .harga span{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--dark);
+}
+main #katalog .katalog-flex .katalog-items .harga-chat-kontainer .chat-button button{
+    background-color: var(--green);
+    color: var(--cyan);
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+main #katalog .katalog-flex .katalog-items .harga-chat-kontainer .chat-button button:hover{
+    background-color: var(--dark);
+}
+
+/* portofolio */
+main #portofolio h1{
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px ;
+}
+main #portofolio .portofolio-deskripsi{
+    color: var(--dark);
+    text-align: center;
+}
+main #portofolio .portofolio-flex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    margin: 30px auto;
+}
+main #portofolio .portofolio-flex .portofolio-items{
+    width: 25%;
+    padding: 5px;
+    overflow: hidden;
+}
+main #portofolio .portofolio-flex .portofolio-items img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.portofolio-items img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: transform 0.5s ease;
+}
+
+/* Contact */
+main #kontak h1{
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+main #kontak .kontak-deskripsi{
+    color: var(--dark);
+    text-align: center;
+}
+main #kontak .kontak-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 100%;
+}
+main #kontak .kontak-flex .map{
+    width: 60%;
+}
+.map iframe{
+    border-radius: 10px;
+}
+main #kontak .kontak-flex .map h3{
+    text-align: center;
+    color: var(--dark);
+}
+main #kontak .kontak-flex .social-media{
+    width: 40% ;
+    padding: 10px;
+}
+main #kontak .kontak-flex .social-media h3{
+    color: var(--dark);
+    text-align: center;
+}
+main #kontak .kontak-flex .social-media .social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--cyan);
+    padding: 5px;
+    border-radius: 10px;
+}
+main #kontak .kontak-flex .social-media .instagram{
+    background-color: var(--dark);
+}
+main #kontak .kontak-flex .social-media .tiktok{
+    background-color: var(--brown);
+}
+main #kontak .kontak-flex .social-media .youtube{
+    background-color:#64081b;
+}
+main #kontak .kontak-flex .social-icon:hover{
+    opacity: 0.7;
+}
+main #kontak .kontak-flex .social-media i{
+    font-size: 30px;
+}
+
+/* footer */
+.footer-container{
+    margin-top: 60px;
+    color: var(--dark);
+    background-color: var(--cyan);
+    padding: 30px 5px;
+    text-align: center;
+}
+.footer-container ul li a{
+    text-decoration: none;
+    color: var(--dark);
+}
+.footer-container ul li a:hover{
+    text-decoration: underline;
+}
+.footer-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-container .footer-flex{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.footer-container .footer-flex section{
+    width:20%;
+}
+.footer-container h3{
+    margin-top: 0;
+}
+.footer-copy-right{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.footer-copy-right i{
+    color: var(--dark);
+}
+/* Versi Tablet dan smartphone */
+@media screen and (max-width:768px){
+    /* Tampilkan hamburger */
+    #nav-container .nav-flex label{
+    display: inline-block;
+    color: var(--dark);
+    font-style: normal;
+    font-size: 32px;
+    padding: 8px;
+    }
+
+    /* susun ulang menu menjadi vertical */
+    #nav-cotainer .nav-flex{
+        width: 100%;
+    }
+    #nav-container .nav-flex nav ul{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    #nav-container .nav-flex nav ul li a{
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px;
+        height: auto;
+    }
+    #nav-container .nav-flex nav ul li a:hover{
+    background-color: var(--peach);
+    transition: all 0 3s;
+    }
+    /* Pindahkan posisi brand ke kanan */
+    #nav-container .nav-flex .nav-brand h2{
+        position: absolute;
+        right: 20px;
+    }
+    /* untuk menampilkan atau menyembunyikan menu */
+    #nav-container nav{
+        display: none;
+    }
+    /* Menampilkan menu ketika teks garis tiga di klik */
+    #nav-container .nav-flex input:checked ~nav{
+        display: flex;
+    }
+
+    /* About */
+    main .about-flex{
+        flex-direction: column;
+    }
+    main .about-flex .about_img,.about-text{
+        width: auto;
+    }
+    /* service our fitur*/
+    main #service .service-flex .service-items{
+        width: 50%;
+    }
+
+    /* catalog */
+    main #katalog .katalog-flex .katalog-items{
+        width: 50%;
+    }
+    main #katalog .katalog-flex .katalog-items .harga-chat-kontainer{
+        flex-direction: column;
+    }
+
+    /* portofolio */
+    main #portofolio .portofolio-flex .portofolio-items{
+        width:30%;
+    }
+
+    /* contact */
+    main #kontak .kontak-flex{
+        flex-direction: column;
+    }
+    main #kontak .kontak-flex .map,
+    main #kontak .kontak-flex .social-media{
+        width: 100%;
+    }
+
+    /* footer */
+    .footer-container .footer-flex section{
+        width: 48%;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width:481px){
+    main #service .service-flex .service-items{
+        width: 100%;
+    }
+    /* katalog */
+    main #katalog .katalog-flex .katalog-items{
+        width: 100%;
+    }
+    main #portofolio .portofolio-flex .portofolio-items{
+        width:100%;
+    }
+    /* footer */
+    .footer-container .footer-flex section{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
